@@ -38,6 +38,9 @@
     font-family: Gatha;
     src: url(FONTS/ZTGatha-SemiBold.ttf);
 }
+a{
+    color: white;
+}
 
 body{
     color: white;
