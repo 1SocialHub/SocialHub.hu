@@ -18,7 +18,7 @@
        
        <br>
     <center><img src="SH.png" alt="" height="380" draggable="false">
-    <h1 id="online-tag">Discord elérhető tagok száma: Betöltés...</h1></center>
+    <h1 id="online-tag">Discord Szerver elérhető tagok száma Betöltés...</h1></center>
 
     <script>
         // A Discord szerver azonosítója
@@ -35,7 +35,7 @@
                 const data = await response.json();
                 
                 // Megjelenítjük a tagok számát
-                document.getElementById('online-tag').textContent = `Discord elérhető tagok száma:  ${data.members.length}`;
+                document.getElementById('online-tag').textContent = `Discord Szerver elérhető tagok száma:  ${data.members.length}`;
             } catch (error) {
                 // Hiba esetén kiírjuk a konzolra
                 console.error('Hiba történt:', error);
