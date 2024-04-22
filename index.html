@@ -17,6 +17,36 @@
        </div>
        
        <br>
-    <center><img src="SH.png" alt="" height="380" draggable="false"></center>
+    <center><img src="SH.png" alt="" height="380" draggable="false">
+    <h1 id="online-tag">Discord elérhető tagok száma: Betöltés...</h1></center>
+
+    <script>
+        // A Discord szerver azonosítója
+        const guildId = '1197924229803425942'; // Az itt megadott helyre írd be a saját szervered azonosítóját
+        
+        // A Discord API végpontja, amely az adatokat szolgáltatja
+        const apiUrl = `https://discord.com/api/guilds/${guildId}/widget.json`;
+    
+        // Függvény a szerver tagok lekéréséhez és megjelenítéséhez
+        async function displayMemberCount() {
+            try {
+                // Lekérjük az adatokat a Discord API-ból
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                
+                // Megjelenítjük a tagok számát
+                document.getElementById('online-tag').textContent = `Discord elérhető tagok száma:  ${data.members.length}`;
+            } catch (error) {
+                // Hiba esetén kiírjuk a konzolra
+                console.error('Hiba történt:', error);
+                document.getElementById('online-tag').textContent = 'Hiba történt a szerver elérésekor.';
+            }
+        }
+    
+        // Az oldal betöltésekor hívjuk meg a függvényt
+        window.onload = displayMemberCount;
+    </script>
+    
+    
 </body>
 </html>
