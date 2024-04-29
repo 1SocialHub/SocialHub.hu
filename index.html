@@ -35,7 +35,7 @@
                 const data = await response.json();
                 
                 // Megjelenítjük a tagok számát
-                document.getElementById('online-tag').textContent = `Discord Szerver elérhető tagok száma:  ${data.members.length}`;
+                document.getElementById('online-tag').textContent = `Discord Szerver elérhető tagok száma:  ${data.members.length + 1}`;
             } catch (error) {
                 // Hiba esetén kiírjuk a konzolra
                 console.error('Hiba történt:', error);
