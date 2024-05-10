@@ -42,15 +42,21 @@ a{
     color: white;
 }
 
-body{
+@keyframes grayBackground {
+    0% { background-color: #000000; }
+    100% { background-color: rgb(12, 12, 12); }
+}
+
+body {
     color: white;
     font-family: 'Poppins-Light';
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: rgb(22, 22, 22);
+    animation: grayBackground 10s linear infinite alternate; /* Itt az animáció: 5 másodperc időtartam, lineáris átmenet, végtelen, váltakozó irányban */
 }
+
 #countdown {
     display: grid;
     text-align: center;
