@@ -3,50 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Hub - 🔰Kezdőlap</title>
+    <title>???</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="gombok" >
-   
-        <a href="index.html" class="kezdolapgomb" ><strong>🔰Kezdőlap</strong></a>
-        <a href="info.html" class="informaciokgomb" title="Információk a Weboldalról" ><strong>ℹ Infórmációk</strong></a>
-        <a href="https://discord.gg/ZdA8mznUZj" ><strong>⚡ Discord Meghívó</strong></a>
-        <a href="jelentkezes.html" ><strong>🫂 Jelentkezés</strong></a>
-       </div>
-       
-       <br>
-    <center><img src="SH.png" alt="" height="380" draggable="false"><br>
-    <h1 id="online-tag">Discord Szerver elérhető tagok száma Betöltés...</h1>
-    <a href="https://discord.gg/ZdA8mznUZj" style="text-decoration: underline;">Csatlakozás a szerverhez</a></center>
-    <script>
-        // A Discord szerver azonosítója
-        const guildId = '1197924229803425942'; // Az itt megadott helyre írd be a saját szervered azonosítóját
-        
-        // A Discord API végpontja, amely az adatokat szolgáltatja
-        const apiUrl = `https://discord.com/api/guilds/${guildId}/widget.json`;
-    
-        // Függvény a szerver tagok lekéréséhez és megjelenítéséhez
-        async function displayMemberCount() {
-            try {
-                // Lekérjük az adatokat a Discord API-ból
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-                
-                // Megjelenítjük a tagok számát
-                document.getElementById('online-tag').textContent = `Discord Szerver elérhető tagok száma:  ${data.members.length + 1}`;
-            } catch (error) {
-                // Hiba esetén kiírjuk a konzolra
-                console.error('Hiba történt:', error);
-                document.getElementById('online-tag').textContent = 'Hiba történt a szerver elérésekor.';
-            }
-        }
-    
-        // Az oldal betöltésekor hívjuk meg a függvényt
-        window.onload = displayMemberCount;
-    </script>
-    
-    
+<p style="font-size: 2cm;">???</p>
+
+       <div id="countdown" class="countdown">
+
+        <div class="time">
+         <h2 id="days">0</h2>
+         <small>Nap</small>
+        </div>
+      
+        <div class="time">
+         <h2 id="hours">0</h2>
+         <small>Óra</small>
+        </div>
+      
+        <div class="time">
+         <h2 id="minutes">0</h2>
+         <small>Perc</small>
+        </div>
+      
+        <div class="time">
+         <h2 id="seconds">0</h2>
+         <small>Másodperc</small>
+        </div>
+      <br> 
+      
+    <script src="countdown.js"></script>
 </body>
 </html>
